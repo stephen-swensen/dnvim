@@ -37,7 +37,7 @@ RUN vim +PlugInstall +qall
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 ENV NVM_DIR /home/dnvim/.nvm
-RUN [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install 6.10.0
+RUN [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install 6.10.0 && npm i gulp -g
 
 WORKDIR /dnvim/host
 CMD ["/bin/bash"]
